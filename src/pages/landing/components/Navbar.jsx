@@ -1,5 +1,5 @@
 import React from 'react'
-import logoNetflix from '../../../../assets/images/logoNetflix.svg'
+import logoNetflix from '../../../assets/images/logoNetflix.svg'
 import { useNavigate } from 'react-router-dom'
 
 
