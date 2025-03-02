@@ -1,7 +1,8 @@
 import React from 'react'
 import Input from './Input'
 
-const Form = ({formInputs, formButtons}) => {
+const Form = ({formInputs, formButtons, signIn}) => {
+
   return (
     <form onSubmit={(e) => e.preventDefault()}>
 
@@ -9,7 +10,9 @@ const Form = ({formInputs, formButtons}) => {
 
            {formInputs.map(input => <Input inputData={input}/>)}
            
-            <button className='bg-red-600 text-white h-[40px] rounded-md hover:cursor-pointer' >Sign In</button>
+            <button 
+                onClick={() => signIn()}
+                className='bg-red-600 text-white h-[40px] rounded-md hover:cursor-pointer' >Sign In</button>
             <div className='flex justify-center gap-1'>
                 {formButtons.map(button => (
                     <button onClick={button.action} className={button.style}>{button.title}</button>

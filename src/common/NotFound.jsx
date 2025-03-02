@@ -1,8 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import Landing from "../pages/landing/Landing";
+import { useEffect } from "react";
 
 const NotFound = () => {
   const navigate = useNavigate();
+
+  const redirectMainPage = () => {
+    setTimeout(()=> {
+      navigate('/')
+    },3000)
+  }
+
+  useEffect(()=> {
+    redirectMainPage()
+  },[])
 
   return (
     <div className="w-full h-screen flex justify-center items-center">

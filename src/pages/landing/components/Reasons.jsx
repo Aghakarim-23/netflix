@@ -3,8 +3,10 @@ import img1 from '../../../assets/images/television.svg'
 import img2 from '../../../assets/images/arrowDown.svg'
 import img3 from '../../../assets/images/telescope.svg'
 import img4 from '../../../assets/images/smile.svg'
+import { useTranslation } from 'react-i18next'
 
 const Reasons = () => {
+    const {t} = useTranslation()
     const reasonsData = [
         {
             title: "Enjoy on your TV",
@@ -30,7 +32,7 @@ const Reasons = () => {
 
   return (
     <div className='bg-black flex flex-col justify-center gap-2 px-[148px]  h-screen'>
-        <h3 className='text-[24px] text-white mb-[1rem]'>More Reasons to Join</h3>
+        <h3 className='text-[24px] text-white mb-[1rem]'>{t("MoreReasons")}</h3>
         <div className='flex gap-[16px]'>
             {reasonsData.map(card => (
                 <div className='w-[274px] h-[268px] flex flex-col justify-between gap-[16px] p-2 rounded-md bg-gradient-to-b from-[#192247] via-[#210E17] to-[#1a1a1a]'>
